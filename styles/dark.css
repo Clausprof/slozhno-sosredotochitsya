@@ -13,14 +13,9 @@
     --txt-color: #F1B2CE;
     --bold-title-color: #000028;
     --transparent-outline-color: rgba(255, 0, 112, 0.4);
-    --bg-img: url(../images/cover-image-dark.png)
+    --bg-img: url(../images/cover-image-dark.png);
   }
-}
-  
-  /* .page {
-    background-image: url(../images/cover-image-dark.png);
-  }
-} */
+}  
 
 .page.theme_dark {
   --accent-color: #ff0070;

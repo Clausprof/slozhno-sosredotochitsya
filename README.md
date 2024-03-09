@@ -1,1 +1,1 @@
-Артем Пахотин
+https://github.com/Clausprof/slozhno-sosredotochitsya.git

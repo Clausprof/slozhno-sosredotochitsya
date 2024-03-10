@@ -17,9 +17,10 @@
   grid-template-rows: 1fr min-content 1fr;
   width: 100%;
   height: max(668px, 100vh);
+  position: relative;
 }
 
-.header::before {
+.decorated-zone::before {
   content: "";
   border-right: 1px solid var(--second-accent-color);
   border-top: 1px solid var(--second-accent-color);
@@ -31,7 +32,7 @@
   height: 25px;
 }
 
-.header::after {
+.decorated-zone::after {
   content: "";
   border-left: 1px solid var(--second-accent-color);
   border-bottom: 1px solid var(--second-accent-color);
@@ -42,6 +43,9 @@
   width: 25px;
   height: 25px;
 }
+
+
+
 
 .rec-icon {
   text-transform: uppercase;
@@ -94,12 +98,12 @@
   font-size: 18px;
   display: flex;
   justify-content: center;
+  padding: 1.5px 13px;
 }
 
 .header__theme-menu-button_active {
   pointer-events: none;
   outline: 1px solid var(--second-accent-color);
-  padding: 1.5px 13px;
 }
 
 .title {
@@ -223,30 +227,6 @@
   align-self: center;
 }
 
-.footer::before {
-  content: "";
-  border-right: 1px solid var(--second-accent-color);
-  border-top: 1px solid var(--second-accent-color);
-  display: flex;
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  width: 25px;
-  height: 25px;
-}
-
-.footer::after {
-  content: "";
-  border-left: 1px solid var(--second-accent-color);
-  border-bottom: 1px solid var(--second-accent-color);
-  display: flex;
-  left: 10px;
-  bottom: 10px;
-  position: absolute;
-  width: 25px;
-  height: 25px;
-}
-
 @media (min-width: 768px) {
 
   .rec-icon {
@@ -256,14 +236,6 @@
 
   .header {
     padding: 20px;
-  }
-
-  .header::before {
-    margin: 10px;
-  }
-
-  .header::after {
-    margin: 10px;
   }
 
   .all {
@@ -341,11 +313,11 @@
     gap: 20px;
   }
 
-  .footer::before {
+  .decorated-zone::after {
     margin: 10px;
   }
 
-  .footer::after {
+  .decorated-zone::before {
     margin: 10px;
   }
 }
@@ -363,7 +335,7 @@
 
   .header__theme-menu-list {
     display: flex;
-    gap: 24px;
+    gap: 10px;
   }
   .header__theme-menu-item:not(:last-child) {
     margin-bottom: 0;
@@ -402,11 +374,5 @@
 
   .footer-title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem) ;
-  }
-}
-
-@media (min-width: 1440px) {
-  .rec-icon {
-    right: calc((100vw - 1386px) / 2 );
   }
 }

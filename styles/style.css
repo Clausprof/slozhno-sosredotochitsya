@@ -44,6 +44,7 @@
 }
 
 .rec-icon {
+  text-transform: uppercase;
   display: flex;
   position: absolute;
   font-size: 18px;
@@ -137,7 +138,13 @@
   display: grid;
   gap: 50px;
   padding: 40px 10px;
-  background-color: var(--bg-color);
+}
+
+.text-block {
+  display: grid;
+  gap: 10px;
+  grid-template-rows: min-content;
+  grid-column:2 ;
 }
 
 .advice-block {
@@ -162,7 +169,7 @@
 }
 
 .contrast-title {
-  margin-bottom: 10px;
+  height: fit-content;
 }
 
 .text {
@@ -177,7 +184,6 @@
 
 .light-title {
   font-weight: normal;
-  margin-bottom: 10px;
 }
 
 .gallary-section {
@@ -195,18 +201,18 @@
 
 .gallary-picture {
   width: 100%;
-  object-fit: contain;
+  height: 100%;
+  object-fit: cover;
   object-position: center;
 }
 
 .footer {
-  padding: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
   width: 100%;
   height: max(668px, 100vh);
-  background-color: var(--bg-color);
 }
 
 .footer-title {
@@ -242,7 +248,7 @@
   height: 25px;
 }
 
-@media (min-width: 767px) {
+@media (min-width: 768px) {
 
   .rec-icon {
     top: 20px;
@@ -251,17 +257,16 @@
 
   .header {
     padding: 20px;
-    gap: 80px;
+  }
+
+  .header::before {
+    margin: 10px;
   }
 
   .header::after {
-    align-self: center;
+    margin: 10px;
   }
 
-  .header__theme-menu {
-    padding-top: 5px;
-  }
-  
   .all {
     display: flex;
     flex-direction: column;
@@ -272,7 +277,6 @@
   .title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     margin-left: -20px;
-    padding-top: 15px;
     align-self: center;
   }
 
@@ -290,10 +294,6 @@
     grid-template-columns: 1fr 2fr;
   }
   
-  .text-block {
-    grid-column:2 ;
-  }
-  
   .distract-items {
     display: flex;
     flex-direction: column;
@@ -307,10 +307,12 @@
   .ice-cream-pic {
     grid-column: 3;
     grid-row: 1 / 3;
+    height: 100%;
   }
 
   .tape-pic {
     grid-area: 2 / 1 / 4 / 2;
+    height: 100%;
   }
 
   .books-pic {
@@ -321,7 +323,9 @@
     grid-area: 3 / 2 / 4 / 4;
   }
 
-
+  button:hover {
+    cursor: pointer;
+  }
 
   .picture-set {
     display: grid;
@@ -334,41 +338,24 @@
     gap: 20px;
   }
 
-  .gallary-picture {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-  }
-
-  .footer {
-    display: flex;
-    flex-direction: row-reverse;
-    padding: 20px;
-  }
-
   .footer::before {
-    align-self: flex-start;
+    margin: 10px;
   }
-  
+
   .footer::after {
-    align-self: flex-end;
+    margin: 10px;
   }
 }
 
 @media (min-width: 1024px) {
 
   .header {
-    gap: 50px;
-  }
-
-  .header::before {
-    position: absolute;
+    gap: 15px;
   }
 
   .header__theme-menu {
+    align-self: flex-start;
     justify-content: center;
-    margin-bottom: 198px;
-    padding-top: 0;
   }
 
   .header__theme-menu-list {
@@ -379,13 +366,8 @@
     margin-bottom: 0;
   }
 
-  .title {
-    padding-top: 0;
-    align-self: flex-start;
-  }
-
   .add-title {
-    align-self: flex-end;
+    align-self: center;
   }
 
   .text-title {
@@ -397,27 +379,18 @@
   }
 
   .aside-title {
-    width: none;
+    grid-column: 1 / 4;
   }
 
   .distract-items {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: max-content 1fr;
-    column-gap: 16px;
+    column-gap: 20px;
   }
 
-  .first-block {
-    grid-row: 2;
-    grid-column: 1;
-  }
-  .second-block {
-    grid-row: 2;
-    grid-column: 2;
-  }
-  .third-block {
-    grid-row: 2;
-    grid-column: 3;
+  .distract-item-block {
+    grid-column: auto;
   }
 
   .picture-set {

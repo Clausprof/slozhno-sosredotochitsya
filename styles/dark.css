@@ -3,19 +3,6 @@
   здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
-@media (prefers-scheme-color: dark) {
-  :root {
-    --accent-color: #ff0070;
-    --second-accent-color: #ff0070;
-    --rec-color:#ff0070;
-    --title-color: #DB00FF;
-    --bg-color: #000028;
-    --txt-color: #F1B2CE;
-    --bold-title-color: #000028;
-    --transparent-outline-color: rgba(255, 0, 112, 0.4);
-    --bg-img: url(../images/cover-image-dark.png);
-  }
-}  
 
 .page.theme_dark {
   --accent-color: #ff0070;
@@ -32,3 +19,17 @@
     чем стили в медиазапросе предпочтений пользователя
   */
 }
+
+@media (prefers-scheme-color: dark) {
+  :root {
+    --accent-color: #ff0070;
+    --second-accent-color: #ff0070;
+    --rec-color:#ff0070;
+    --title-color: #DB00FF;
+    --bg-color: #000028;
+    --txt-color: #F1B2CE;
+    --bold-title-color: #000028;
+    --transparent-outline-color: rgba(255, 0, 112, 0.4);
+    --bg-img: url(../images/cover-image-dark.png);
+  }
+}  

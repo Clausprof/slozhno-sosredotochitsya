@@ -79,7 +79,7 @@
   justify-content: center;
 }
 .header__theme-menu-item:not(:last-child) {
-  margin-bottom: 11px;
+  margin-bottom: 10px;
 }
 
 .header__theme-menu-item:hover {

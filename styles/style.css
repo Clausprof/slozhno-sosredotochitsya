@@ -104,6 +104,7 @@
 .header__theme-menu-button_active {
   pointer-events: none;
   outline: 1px solid var(--second-accent-color);
+  padding: 1.5px 13px;
 }
 
 .title {
@@ -337,6 +338,11 @@
     display: flex;
     gap: 10px;
   }
+
+  .header__theme-menu-item {
+    align-items: baseline;
+  }
+
   .header__theme-menu-item:not(:last-child) {
     margin-bottom: 0;
   }
@@ -363,7 +369,6 @@
     grid-template-rows: max-content 1fr;
     column-gap: 20px;
   }
-
   .distract-item-block {
     grid-column: auto;
   }

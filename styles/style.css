@@ -144,7 +144,6 @@
   display: grid;
   gap: 10px;
   grid-template-rows: min-content;
-  grid-column:2 ;
 }
 
 .advice-block {
@@ -292,6 +291,10 @@
   .content-block {
     display: grid;
     grid-template-columns: 1fr 2fr;
+  }
+
+  .text-block {
+    grid-column: 2;
   }
   
   .distract-items {
